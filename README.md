@@ -94,3 +94,5 @@ let c = a + b
 # Видео
 
 [![Иконка Markdown](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/208px-Markdown-mark.svg.png "Язык разметки документов")](https://youtu.be/jfKfPfyJRdk)
+
+
