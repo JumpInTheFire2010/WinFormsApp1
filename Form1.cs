@@ -14,7 +14,8 @@ namespace WinFormsApp1
                 Graphics graphics = CreateGraphics();
                 graphics.FillPie(brush, 20, 20, 40, 40, 30, 20);
                 graphics.Dispose();
-                brush = Brushes.DarkViolet;
+                //brush = Brushes.DarkViolet;
+                brush = Brushes.Red;
                 Graphics graphics1 = CreateGraphics();
                 graphics1.FillPie(brush, 60, 60, 100, 100, 20, 20);
                 graphics1.Dispose();
