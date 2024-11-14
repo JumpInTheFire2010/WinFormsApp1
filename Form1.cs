@@ -10,9 +10,9 @@ namespace WinFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             Brush brush;
-                brush = Brushes.LemonChiffon;
+                brush = Brushes.Black;
                 Graphics graphics = CreateGraphics();
-                graphics.FillPie(brush, 20, 20, 40, 40, 30, 20);
+                graphics.FillEllipse(brush, 0, 0, 20, 20);
                 graphics.Dispose();
                 //brush = Brushes.DarkViolet;
                 brush = Brushes.Red;
