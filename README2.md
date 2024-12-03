@@ -2,78 +2,69 @@
 **Цель:** - создать проект по прорисовки фигур, загрузить его на GitHub и получить обратно измененный партнером файл
 
 ## Начало
-Сначала создается проект **Visual Studio**
+
+Создаем проект **Visual Studio**
+
 ----------------------------
 ## Код
 ```
 namespace WinFormsApp1
 {
-	public partial class Form1 : Form
-	{
-    	public Form1()
-    	{
-        	InitializeComponent();
-    	}
-    	Brush? brush;
-    	readonly object locker = new();
-    	void Painter1()
-    	{
-        	brush = Brushes.Black;
-        	lock (locker)
-        	{
-            	Graphics graphics = CreateGraphics();
-            	graphics.FillEllipse(brush, 0, 0, 20, 20);
-            	graphics.Dispose();
-        	}
-    	}
-    	void Painter2()
-    	{
-        	brush = Brushes.DarkViolet;
-        	lock (locker)
-        	{
-            	Graphics graphics = CreateGraphics();
-            	graphics.FillPie(brush, 60, 60, 100, 100, 20, 20);
-            	graphics.Dispose();
-        	}
-    	}
-    	private void button1_Click(object sender, EventArgs e)
-    	{
-        	Thread thread1 = new(Painter1);
-        	Thread thread2 = new(Painter2);
-        	thread1.Start();
-        	thread2.Start();
-    	}
-	}
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Brush brush;
+                brush = Brushes.Black;
+                Graphics graphics = CreateGraphics();
+                graphics.FillEllipse(brush, 0, 0, 20, 20);
+                graphics.Dispose();
+                //brush = Brushes.DarkViolet;
+                brush = Brushes.Red;
+                Graphics graphics1 = CreateGraphics();
+                graphics1.FillPie(brush, 60, 60, 100, 100, 20, 20);
+                graphics1.Dispose();
+ 
+        }
+    }
 }
 ```
 -----------------------------
 
-1. Отправляем в репозиторий
-2. Друг получает файлик и меняет его
-3. Друг отправляет нам
-   1. или не отправляет
-4. Мы получаем его справленный файлик
+1. Отправляем готовый проект в репозиторий партнеру
+   1. Подпункт
+      1. Подподпункт
+3. Он получает наш файл и меняет его
+4. Отправляет нам обратно
+5. Мы получаем измененный файл
 
 -----------------------------
    
 ## Ссылка
-https://github.com/JumpInTheFire2010
+https://github.com/GooSlicer
 
 -------------------
 
-| круг | сектор |
+##Моё задание:
+
+| Фигура 1 | Фигура 2 |
 |:-------:|:-------:|
-| у меня  | не у меня  |
-| у меня  | у меня  |
+| сектор  | сектор  |
+| лимоновый  | фиолетовый  |
 
 ------------------------
 
-### Величайшая цитата
->Пчела наш брат, кто забыл - я напомню
->>Bee is our bro, who forget - I remind
+### Цитата
+>Searching
+>>Seek and destroy
 
 -------------------------
 
-![Иконка](https://media.tenor.com/Y-Z4AKcohrsAAAAe/%D0%BA%D0%BE%D1%82-%D0%BB%D0%B8%D0%B6%D0%B5%D1%82.png)
+![https://media.tenor.com/Y-Z4AKcohrsAAAAe/%D0%BA%D0%BE%D1%82-%D0%BB%D0%B8%D0%B6%D0%B5%D1%82](https://i.ytimg.com/vi/8NSJVptDof0/maxresdefault.jpg)
 
 
